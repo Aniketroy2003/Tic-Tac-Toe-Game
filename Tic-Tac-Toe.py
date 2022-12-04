@@ -1,11 +1,15 @@
 # This is a tic tac toe game
 
-# import tkinter as tk
+
+#-----------imports-----------------
 from tkinter import *
 import random
 
-# -----------------------functions------------------------
 
+
+# =========================functions========================
+
+#-----------------turns-------------------
 def player_turn(row,column):
     global player
     if buttons[row][column]['text'] == '' and winner() is False:
@@ -40,7 +44,7 @@ def player_turn(row,column):
 
 
 
-
+#-------------------new Game-----------------------------
 def new_game():
     global player
     player = random.choice(players)
@@ -49,7 +53,8 @@ def new_game():
         for column in range(3):
             buttons[row][column].config(text='',bg='#F0F0F0')
 
-
+            
+#----------------------Winner Winner!---------------------------
 def winner():
 
     #------------horizontal match condition-------------
@@ -93,7 +98,7 @@ def winner():
     else:
         return False
 
-
+#--------------------blank boxes------------------
 def blank_spaces():
     spaces = 9
 
@@ -110,7 +115,7 @@ def blank_spaces():
 
 
 
-#-----------------------The GUI part-----------------------------
+#=================================The GUI part=================================
 
 window = Tk()                       # initialising gui window
 window.title('Tic-Tac-Toe Game')
