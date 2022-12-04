@@ -1,7 +1,7 @@
 # Tic-Tac-Toe_Game
 
-## Language: Python
-## Library : Tkinter
+Language: Python
+Library : Tkinter
 
 
 ## -------------------------Game Layout------------------------
